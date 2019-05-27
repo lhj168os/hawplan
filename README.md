@@ -2,9 +2,9 @@
 ## 会议成员
 姓名 | 技术擅长 | 备注
 -|-|-
-刘哲 | TypeScript |
-卢学文 | PHP |
-梁焕杰 | Golang |
+刘 | TypeScript |
+卢 | PHP |
+梁 | Golang |
 ---
 ## 会议流程
 时间 | 安排 | 会议内容
