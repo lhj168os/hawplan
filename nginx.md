@@ -26,7 +26,6 @@ server {
 server {
     listen 443 ssl;
     server_name           www.hawtech.cn;
-    ssl                   on;
     ssl_certificate       /home/www/ssl/1_www.hawtech.cn_bundle.crt;
     ssl_certificate_key   /home/www/ssl/2_www.hawtech.cn.key;
     ssl_session_timeout   5m;
