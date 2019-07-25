@@ -268,3 +268,23 @@ wait end: 5
 Run end!
 ```
 ---
+## ``type Pool``
+功能：
+Pool 是可伸缩、并发安全的临时对象池，用来存放已经分配但暂时不用的临时对象，通过对象重用机制，缓解 GC 压力，提高程序性能。
+
+模块定义：
+```go
+type Pool struct {
+        // New optionally specifies a function to generate
+        // a value when Get would otherwise return nil.
+        // It may not be changed concurrently with calls to Get.
+        New func() interface{}
+        // contains filtered or unexported fields
+}
+
+//function list:
+func (p *Pool) Get() interface{}  //从 Pool 中获取元素，元素数量 -1，当 Pool 中没有元素时，会调用 New 生成元素，新元素不会放入 Pool 中，若 New 未定义，则返回 nil
+func (p *Pool) Put(x interface{}) // 把用完的元素放回Pool中
+```
+
+示例：
